@@ -4,11 +4,11 @@ type MenuITems = {
     price: number
 }
 
-type orderItem = MenuITems & {
+type OrderItem = MenuITems & {
     quantity: number
 }
 
 export type {
     MenuITems,
-    orderItem
+    OrderItem
 }
