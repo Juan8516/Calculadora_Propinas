@@ -8,9 +8,9 @@ export default function OrderContents({order}: OrderContentsProps) {
   return (
     <div>
         <h2 className=' font-black text-4xl'>Consumo</h2>
-        <div>
+        <div className='space-y-3 mt-5 text-xl'>
             {order.length === 0 ?
-              <p>la orden esta vacia</p>  
+              <p className="text-center text-xl">la orden esta vacia</p>  
           :(
               order.map(item => (
                 <div key={item.id}>
