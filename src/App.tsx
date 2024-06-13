@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <header className=" bg-teal-400 py-10">
+      <header className=" bg-teal-400 py-10 mt-5">
         <h1 className="text-center text-4xl font-black">Calculadora Propinas Y Consumo</h1>
       </header>
 
