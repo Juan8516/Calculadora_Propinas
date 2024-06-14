@@ -1,3 +1,4 @@
+import { formatCurrent } from "../helpers"
 import { OrderItem } from "../types"
 
 type OrderContentsProps = {
@@ -15,7 +16,7 @@ export default function OrderContents({order}: OrderContentsProps) {
               order.map(item => (
                 <div key={item.id}>
                   <p>
-                    {item.name}
+                    {item.name} - {formatCurrent(item.price)}
                   </p>
                 </div>
               ))
