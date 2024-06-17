@@ -18,6 +18,9 @@ export default function OrderContents({order}: OrderContentsProps) {
                   <p>
                     {item.name} - {formatCurrent(item.price)}
                   </p>
+                  <p>
+                    Cantidad: {item.quantity} - {item.price * item.quantity}
+                  </p>
                 </div>
               ))
           )}
