@@ -1,18 +1,18 @@
 export default function OrderTotals() {
   return (
     <>
-        <div>
-            <h2>Total y Propina</h2>
+        <div className="space-y-3">
+            <h2 className="font-black text-2xl">Total y Propina</h2>
             <p>Subtotal a pagar: {''}
-                <span>$0</span>
+                <span className="font-bold">$0</span>
             </p>
 
-            <p>¨Propina: {''}
-                <span>$0</span>
+            <p>Propina: {''}
+                <span className="font-bold">$0</span>
             </p>
 
             <p>Total a pagar: {''}
-                <span>$0</span>
+                <span className="font-bold">$0</span>
             </p>
         </div>
 
