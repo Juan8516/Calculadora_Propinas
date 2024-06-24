@@ -19,21 +19,21 @@ const tipOptions = [
 export const TipPercentageForm = () => {
   return (
     <div>
-        <h3>Propinas: </h3>
-        {tipOptions.map(tip => (
-            <div key={tip.id}>
-                <label htmlFor={tip.id}>{tip.label}</label>
-                <input
-                    id={tip.id}
-                    type="radio"
-                    name="tip"
-                    value={tip.value}
-                />    
-            </div>
-        ))}
-
         <form>
-
+            <h3 className="font-black text-2xl mb-2">Propinas: </h3>
+            {tipOptions.map(tip => (
+                <div 
+                    className="flex gap-2"
+                    key={tip.id}>
+                    <label htmlFor={tip.id}>{tip.label}</label>
+                    <input
+                        id={tip.id}
+                        type="radio"
+                        name="tip"
+                        value={tip.value}
+                    />    
+                </div>
+            ))}
         </form>
     </div>
   )
