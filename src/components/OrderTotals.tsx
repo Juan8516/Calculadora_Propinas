@@ -4,7 +4,8 @@ import { formatCurrent } from "../helpers"
 
 type OrderTotalsProps = {
     order: OrderItem[],
-    tip: number
+    tip: number,
+
 }
 
 export default function OrderTotals({ order, tip } : OrderTotalsProps) {
@@ -12,7 +13,8 @@ export default function OrderTotals({ order, tip } : OrderTotalsProps) {
     const subTotalAmount = useMemo(() => order.reduce((total, item) => total + (item.quantity * item.price), 0 ),
     [order])
     const tipAmount = useMemo(() => subTotalAmount * tip, [tip, order])
-  
+    const totalAmount= useMemo(() => subTotalAmount + tipAmount, [subTotalAmount, tipAmount])
+    
     return (
 
     <>
@@ -27,7 +29,7 @@ export default function OrderTotals({ order, tip } : OrderTotalsProps) {
             </p>
 
             <p>Total a pagar: {''}
-                <span className="font-bold">$0</span>
+                <span className="font-bold">{ formatCurrent(totalAmount) }</span>
             </p>
         </div>
 
