@@ -29,7 +29,11 @@ export default function OrderTotals({ order } : OrderTotalsProps) {
             </p>
         </div>
 
-        <button></button>
+        <button
+            className="w-full bg-black p-3 text-white font-bold my-10"
+        >
+            Guardar Orden
+        </button>
     </>
   )
 }
