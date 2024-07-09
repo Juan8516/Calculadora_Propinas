@@ -34,7 +34,8 @@ export default function OrderTotals({ order, tip } : OrderTotalsProps) {
         </div>
 
         <button
-            className="w-full bg-black p-4 text-white font-bold my-10"
+            className="w-full bg-black p-5 uppercase text-white font-bold my-10 disabled:opacity-10"
+            disabled={totalAmount === 0}
         >
             Guardar Orden
         </button>
